@@ -19,3 +19,11 @@ MIN_SCAN_INTERVAL = 90
 MAX_SCAN_INTERVAL = 3600
 
 MANUFACTURER = "SweTrack"
+
+# Events are only fetched when a tracker has reported something new, and only
+# while the quota still covers the position polls until reset plus this margin.
+EVENT_QUOTA_RESERVE = 50
+# Events older than this when we first see them are not fired (for example
+# after a quota pause), so automations don't react to stale alarms.
+EVENT_MAX_AGE_MINUTES = 15
+SIGNAL_EVENT = "swetrack_event_{}"

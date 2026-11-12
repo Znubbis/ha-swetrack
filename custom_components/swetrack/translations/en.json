@@ -62,6 +62,49 @@
       },
       "relay": {
         "name": "Relay"
+      }
+    },
+    "event": {
+      "event": {
+        "name": "Event",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "alarmcenter": "Alarm centre",
+              "device_charge_off": "Charging stopped",
+              "device_charge_on": "Charging started",
+              "device_hum_below": "Humidity below limit",
+              "device_hum_exceeded": "Humidity above limit",
+              "device_light_off": "Light off",
+              "device_light_on": "Light on",
+              "device_moving": "Moving",
+              "device_offline": "Offline",
+              "device_online": "Online",
+              "device_overspeed": "Speed alarm",
+              "device_sleep_on": "Sleeping",
+              "device_temp_below": "Temperature below limit",
+              "device_temp_exceeded": "Temperature above limit",
+              "device_wake": "Woke up",
+              "geofence_enter": "Entered geofence",
+              "geofence_exit": "Left geofence",
+              "ignition_off": "Ignition off",
+              "ignition_on": "Ignition on",
+              "low_battery": "Low battery",
+              "power_cut": "Power cut",
+              "power_off": "External power off",
+              "power_on": "External power on",
+              "psmsafetyzone": "Safety zone",
+              "tampering": "Tampering",
+              "vibration": "Vibration",
+              "other": "Other"
+            }
+          }
+        }
+      }
+    },
+    "switch": {
+      "relay": {
+        "name": "Relay"
       },
       "powersaving_mode": {
         "name": "Power saving mode"

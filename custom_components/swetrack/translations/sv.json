@@ -62,6 +62,49 @@
       },
       "relay": {
         "name": "Relä"
+      }
+    },
+    "event": {
+      "event": {
+        "name": "Händelse",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "alarmcenter": "Larmcentral",
+              "device_charge_off": "Laddning avslutad",
+              "device_charge_on": "Laddning startad",
+              "device_hum_below": "Luftfuktighet under gräns",
+              "device_hum_exceeded": "Luftfuktighet över gräns",
+              "device_light_off": "Ljus av",
+              "device_light_on": "Ljus på",
+              "device_moving": "I rörelse",
+              "device_offline": "Offline",
+              "device_online": "Online",
+              "device_overspeed": "Hastighetslarm",
+              "device_sleep_on": "Sover",
+              "device_temp_below": "Temperatur under gräns",
+              "device_temp_exceeded": "Temperatur över gräns",
+              "device_wake": "Vaknade",
+              "geofence_enter": "Gick in i geofence",
+              "geofence_exit": "Lämnade geofence",
+              "ignition_off": "Tändning av",
+              "ignition_on": "Tändning på",
+              "low_battery": "Låg batterinivå",
+              "power_cut": "Strömmen bruten",
+              "power_off": "Extern ström av",
+              "power_on": "Extern ström på",
+              "psmsafetyzone": "Säkerhetszon",
+              "tampering": "Manipulation",
+              "vibration": "Vibration",
+              "other": "Övrigt"
+            }
+          }
+        }
+      }
+    },
+    "switch": {
+      "relay": {
+        "name": "Relä"
       },
       "powersaving_mode": {
         "name": "Energisparläge"

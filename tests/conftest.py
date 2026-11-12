@@ -60,4 +60,9 @@ def mock_api() -> Generator[AsyncMock]:
         api.usage = dict(USAGE)
         api.async_get_account.return_value = dict(USER)
         api.async_get_devices.return_value = [DEVICE]
+        api.async_get_events.return_value = []
+        api.async_edit_device.return_value = {
+            "updated_fields": {},
+            "skipped_fields": {},
+        }
         yield api

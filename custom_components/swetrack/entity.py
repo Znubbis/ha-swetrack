@@ -28,7 +28,9 @@ class SwetrackEntity(CoordinatorEntity[SwetrackCoordinator]):
 
     _attr_has_entity_name = True
 
-    def __init__(self, coordinator: SwetrackCoordinator, device_id: str, key: str) -> None:
+    def __init__(
+        self, coordinator: SwetrackCoordinator, device_id: str, key: str
+    ) -> None:
         """Initialize the entity."""
         super().__init__(coordinator)
         self._device_id = device_id

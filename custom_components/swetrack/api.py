@@ -108,3 +108,26 @@ class SwetrackApi:
             for device in data.get("devices") or []
             if isinstance(device, dict) and device.get("id")
         ]
+
+    async def async_get_events(self, pagesize: int = 50) -> list[dict[str, Any]]:
+        """Return the newest events for all devices, newest first."""
+        data = await self._request(
+            "POST", "/events/list", {"page": 1, "pagesize": pagesize, "sort": "latest"}
+        )
+        return [
+            event
+            for event in data.get("events") or []
+            if isinstance(event, dict) and event.get("id")
+        ]
+
+    async def async_edit_device(
+        self, device_id: str, fields: dict[str, Any]
+    ) -> dict[str, Any]:
+        """Change device settings and return the updated/skipped summary.
+
+        The tracker applies relay and power saving changes the next time it is
+        awake, so a successful call means "queued", not "done".
+        """
+        return await self._request(
+            "POST", "/device/edit", {"deviceid": device_id, **fields}
+        )

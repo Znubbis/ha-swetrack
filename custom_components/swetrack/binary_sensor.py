@@ -54,12 +54,6 @@ BINARY_SENSORS: tuple[SwetrackBinarySensorDescription, ...] = (
         translation_key="relay",
         value_fn=lambda d: nested(d, "relay_switch", "value"),
     ),
-    SwetrackBinarySensorDescription(
-        key="powersaving_mode",
-        translation_key="powersaving_mode",
-        entity_category=EntityCategory.DIAGNOSTIC,
-        value_fn=lambda d: nested(d, "powersaving_mode", "current"),
-    ),
 )
 
 
