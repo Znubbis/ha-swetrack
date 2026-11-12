@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect SweTrack",
+        "description": "Create an API key in the SweTrack app under Profile → API (switch API on, reveal the key and copy it).",
+        "data": {
+          "api_token": "API key"
+        }
+      },
+      "reauth_confirm": {
+        "title": "New SweTrack API key",
+        "description": "The API key no longer works. Refreshing the key in the SweTrack app invalidates the old one. Enter the current key.",
+        "data": {
+          "api_token": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "SweTrack did not accept the API key.",
+      "cannot_connect": "Could not reach SweTrack. Try again in a moment."
+    },
+    "abort": {
+      "already_configured": "This SweTrack account is already set up.",
+      "reauth_successful": "The API key was updated.",
+      "wrong_account": "That key belongs to a different SweTrack account."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Update interval"
+        },
+        "data_description": {
+          "scan_interval": "SweTrack allows about 1000 API calls per day. 120 s uses 720 of them, 90 s uses 960."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "external_voltage": {
+        "name": "External voltage"
+      },
+      "position_time": {
+        "name": "Last position"
+      },
+      "last_update": {
+        "name": "Last contact"
+      },
+      "requests_remaining": {
+        "name": "API calls remaining today"
+      }
+    },
+    "binary_sensor": {
+      "ignition": {
+        "name": "Ignition"
+      },
+      "external_power": {
+        "name": "External power"
+      },
+      "relay": {
+        "name": "Relay"
+      },
+      "powersaving_mode": {
+        "name": "Power saving mode"
+      }
+    }
+  }
+}
